@@ -1,0 +1,21 @@
+/* TEAM */
+
+Developer: Francisco Omedes
+Role: Full Stack Developer
+Location: London, UK
+Contact: fomedes.dev@gmail.com
+Website: https://fomedes.dev
+GitHub: https://github.com/fomedes
+
+
+/* SITE */
+
+Built with: Astro
+Styling: Tailwind CSS
+Deployment: Cloudfare
+Icons: SVG
+
+
+/* THANKS */
+
+Inspired by modern developer portfolios

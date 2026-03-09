@@ -1,0 +1,86 @@
+---
+import type { HeroProps } from "@types";
+import Section from "./Section.astro";
+
+type Props = HeroProps;
+
+const { name, specialty, summary, email } = Astro.props;
+---
+
+<Section text="" href="hero">
+  <h1
+    class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
+  >
+    {name}
+  </h1>
+
+  <p
+    id="specialty"
+    class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
+  ></p>
+
+  <p class="mb-16 text-base font-normal text-neutral md:text-lg">
+    {summary}
+  </p>
+
+  <button
+    id="contact-btn"
+    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-white transition-transform hover:scale-105 cursor-pointer"
+  >
+    Get in Touch
+  </button>
+
+  <span
+    id="copy-toast"
+    class="ml-4 text-sm text-neutral opacity-0 transition-opacity duration-300"
+  >
+    Email copied to clipboard!
+  </span>
+
+</Section>
+
+<script define:vars={{ email, specialty }}>
+  const button = document.getElementById("contact-btn");
+  const toast = document.getElementById("copy-toast");
+  const specialtyEl = document.getElementById("specialty");
+
+  // Copy email interaction
+  button?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+
+      // Button visual feedback
+      button.classList.add("scale-95");
+
+      setTimeout(() => {
+        button.classList.remove("scale-95");
+      }, 150);
+
+      // Show toast
+      toast.classList.remove("opacity-0", "translate-y-2");
+      toast.classList.add("opacity-100", "translate-y-0");
+
+      // Hide toast
+      setTimeout(() => {
+        toast.classList.remove("opacity-100", "translate-y-0");
+        toast.classList.add("opacity-0", "translate-y-2");
+      }, 2000);
+
+    } catch {
+      window.location.href = `mailto:${email}`;
+    }
+  });
+
+  // Typewriter effect
+  let index = 0;
+
+  function type() {
+    if (index < specialty.length) {
+      specialtyEl.textContent += specialty.charAt(index);
+      index++;
+      setTimeout(type, 45);
+    }
+  }
+
+  type();
+</script>
