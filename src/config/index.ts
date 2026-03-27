@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Francisco Omedes — Mobile & Web Developer",
   author: "fomedes.dev",
   description:
-    "Website Developer based in London. I specialize in web and mobile application development and maintenance.",
+    "Website Developer based in London. I specialize in web application development and maintenance.",
   lang: "en",
   siteLogo: "/profile-small.png",
   navLinks: [
@@ -19,7 +19,7 @@ export const SITE_CONFIG: SiteConfig = {
     },
     { text: "Github", href: "https://github.com/fomedes" },
   ],
-  socialImage: "/zen-og.png",
+  socialImage: "",
   canonicalURL: "https://fomedes.dev/",
 };
 
@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Francisco Omedes",
     specialty: "Mobile & Web Developer",
     summary:
-      "Website Developer based in London. I specialize in web and mobile application development and maintenance.",
+      "Website Developer based in London. I specialize in web application development and maintenance.",
     email: "fomedes.dev@gmail.com",
   },
   experience: [
