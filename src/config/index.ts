@@ -20,7 +20,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Github", href: "https://github.com/fomedes" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app", /// Update
+  canonicalURL: "https://fomedes.dev/",
 };
 
 export const SITE_CONTENT: SiteContent = {
