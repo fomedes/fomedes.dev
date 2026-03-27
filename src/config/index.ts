@@ -112,7 +112,7 @@ export const SITE_CONTENT: SiteContent = {
       tech: ["Angular", "Nodejs", "MongoDB"],
       summary:
         "Web application designed to manage a multiplayer career mode for EA Sports FC. It allows players to organize leagues, track teams, and manage competition data through a custom backend.",
-      linkPreview: "/",
+      linkPreview: "",
       linkSource: "https://github.com/fomedes/road-to-glory-app",
       video: "/projects/road-to-glory.webm",
       image: "/projects/clone-ig.png",
@@ -143,7 +143,7 @@ export const SITE_CONTENT: SiteContent = {
       tech: ["Angular"],
       summary:
         "Web application designed to retrieve and display data from a blockchain football game using its APIs.\nThe project has been shut down, so the site is currently unable to get data anymore.",
-      linkPreview: "https://metacrew.netlify.app/",
+      linkPreview: "",
       linkSource: "https://github.com/fomedes/meta-crew",
       image: "/projects/metacrew.png",
     },
